@@ -1,0 +1,40 @@
+.gov-hiring {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.gov-hiring-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.gov-hiring-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.gov-chart-card {
+  padding: 20px;
+}
+
+.gov-chart-container {
+  margin-top: 12px;
+}
+
+@media (max-width: 1024px) {
+  .gov-hiring-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gov-hiring-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .gov-hiring-stats {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,156 @@
+.rm-node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+  width: 140px;
+}
+
+.rm-node:hover {
+  transform: translateY(-4px) scale(1.04);
+}
+
+.rm-node--locked {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.rm-node--locked:hover {
+  transform: none;
+}
+
+/* ── Square shape ── */
+.rm-node--square .rm-node-icon-wrap {
+  width: 100px;
+  height: 100px;
+  border-radius: 18px;
+  background: var(--node-bg);
+  border: 2.5px solid var(--node-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow:
+    0 0 18px var(--node-glow),
+    inset 0 0 20px var(--bg-glass);
+  transition: box-shadow 0.3s ease;
+}
+
+.rm-node:hover .rm-node-icon-wrap {
+  box-shadow:
+    0 0 30px var(--node-glow),
+    0 0 60px var(--node-glow),
+    inset 0 0 20px var(--bg-glass);
+}
+
+/* ── Hexagon shape ── */
+.rm-node--hexagon .rm-node-icon-wrap {
+  width: 110px;
+  height: 100px;
+  background: var(--node-bg);
+  border: 2.5px solid var(--node-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  box-shadow: 0 0 18px var(--node-glow);
+  transition: box-shadow 0.3s ease;
+}
+
+.rm-node--hexagon .rm-node-icon-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: var(--node-border);
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0.6;
+}
+
+.rm-node:hover .rm-node-icon-wrap {
+  box-shadow: 0 0 40px var(--node-glow);
+}
+
+/* ── Icons ── */
+.rm-node-icon {
+  font-size: 1.6rem;
+  color: var(--node-color);
+  filter: drop-shadow(0 0 6px var(--node-glow));
+}
+
+.rm-node-icon--locked {
+  color: var(--text-muted);
+  filter: none;
+  font-size: 1.2rem;
+}
+
+/* ── Labels ── */
+.rm-node-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  text-align: center;
+  max-width: 140px;
+}
+
+.rm-node-title {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: 0.03em;
+}
+
+.rm-node-subtitle {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  line-height: 1.2;
+}
+
+/* ── Completed checkmark ── */
+.rm-node-check {
+  position: absolute;
+  top: -4px;
+  right: 18px;
+  width: 22px;
+  height: 22px;
+  background: #10b981;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  color: white;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+  z-index: 2;
+}
+
+/* ── Current pulse ── */
+.rm-node-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 100px;
+  height: 100px;
+  border-radius: 18px;
+  border: 2px solid var(--node-color);
+  animation: rm-pulse 2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.rm-node--hexagon .rm-node-pulse {
+  border-radius: 0;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+@keyframes rm-pulse {
+  0%, 100% { opacity: 0.6; transform: translate(-50%, -60%) scale(1); }
+  50% { opacity: 0; transform: translate(-50%, -60%) scale(1.25); }
+}

@@ -1,0 +1,55 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.project-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.project-card-description {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.project-card-meta {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.project-card-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.project-card-tag {
+  padding: 3px 8px;
+  background: rgba(224, 69, 160, 0.1);
+  color: var(--accent-purple-light);
+  border-radius: var(--radius-full);
+  font-size: 0.65rem;
+  font-weight: 600;
+}
+
+.project-card-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.project-card-skill {
+  font-size: 0.7rem;
+  color: var(--accent-green);
+}

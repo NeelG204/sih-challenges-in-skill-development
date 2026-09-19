@@ -1,0 +1,27 @@
+.card {
+  background: var(--bg-card);
+  border: none;
+  border-radius: var(--radius-xxl);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .card {
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(16px);
+}
+
+.card--glow:hover {
+  box-shadow: 0 0 25px rgba(224, 69, 160, 0.2);
+  transform: translateY(-2px);
+}
+
+.card--clickable {
+  cursor: pointer;
+}
+
+.card--clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(224, 69, 160, 0.2);
+}

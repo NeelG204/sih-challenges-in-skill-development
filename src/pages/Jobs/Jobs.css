@@ -1,0 +1,116 @@
+.jobs-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.job-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+}
+
+.job-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.job-card-company {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.job-card-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--gradient-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: white;
+}
+
+.job-card-role {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.job-card-company-name {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.job-card-match {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.match-value {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--accent-cyan);
+}
+
+.match-label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.job-card-details {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.job-detail {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.job-card-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.job-skills-label,
+.missing-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.job-skills-tags,
+.missing-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.job-card-missing {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+@media (max-width: 768px) {
+  .jobs-grid {
+    grid-template-columns: 1fr;
+  }
+}

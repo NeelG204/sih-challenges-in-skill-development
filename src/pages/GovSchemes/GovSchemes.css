@@ -1,0 +1,171 @@
+.gov-schemes {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.gov-schemes-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.gov-schemes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.gov-scheme-list-card {
+  padding: 20px;
+}
+
+.gov-scheme-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.gov-scheme-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 12px;
+  border-radius: var(--radius-md);
+  background: var(--bg-primary);
+  transition: background 0.2s;
+}
+
+.gov-scheme-row:hover {
+  background: var(--bg-card-hover);
+}
+
+.gov-scheme-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.gov-scheme-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.gov-scheme-full {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.gov-scheme-metrics {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.gov-scheme-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gov-scheme-metric-value {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.gov-scheme-metric-label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.gov-chart-card {
+  padding: 20px;
+}
+
+.gov-chart-container {
+  margin-top: 12px;
+}
+
+.gov-funnel-detail {
+  padding: 20px;
+}
+
+.gov-funnel-stages {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.gov-funnel-stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 0;
+}
+
+.gov-funnel-bar-wrap {
+  height: 28px;
+  background: var(--bg-primary);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.gov-funnel-bar {
+  height: 100%;
+  border-radius: var(--radius-md);
+  transition: width 0.8s ease-out;
+}
+
+.gov-funnel-stage-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gov-funnel-stage-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  min-width: 80px;
+}
+
+.gov-funnel-stage-value {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-purple);
+}
+
+.gov-funnel-stage-pct {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.gov-funnel-drop {
+  font-size: 0.65rem;
+  color: #ef4444;
+  margin-left: 92px;
+}
+
+@media (max-width: 1024px) {
+  .gov-schemes-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gov-schemes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .gov-schemes-stats {
+    grid-template-columns: 1fr;
+  }
+  .gov-scheme-row {
+    flex-wrap: wrap;
+  }
+}

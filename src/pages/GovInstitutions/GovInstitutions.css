@@ -1,0 +1,103 @@
+.gov-institutions {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.gov-inst-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.gov-inst-card {
+  padding: 20px;
+}
+
+.gov-inst-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 12px;
+  border-left: 3px solid;
+  margin-bottom: 16px;
+}
+
+.gov-inst-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.gov-inst-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gov-inst-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.gov-inst-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gov-inst-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gov-inst-detail-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.gov-inst-detail-value {
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.gov-inst-gap {
+  color: #ef4444;
+}
+
+.gov-inst-charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.gov-chart-card {
+  padding: 20px;
+}
+
+.gov-chart-container {
+  margin-top: 12px;
+}
+
+@media (max-width: 1024px) {
+  .gov-inst-grid {
+    grid-template-columns: 1fr;
+  }
+  .gov-inst-charts-grid {
+    grid-template-columns: 1fr;
+  }
+}

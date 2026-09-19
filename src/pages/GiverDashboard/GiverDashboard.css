@@ -1,0 +1,249 @@
+.giver-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.giver-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.giver-dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.giver-dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 20px;
+}
+
+.giver-applications-card {
+  padding: 20px;
+}
+
+.giver-applications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.giver-view-all {
+  font-size: 0.8rem;
+  color: var(--accent-purple-light);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s;
+}
+
+.giver-view-all:hover {
+  color: var(--accent-purple);
+}
+
+.giver-applications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.giver-application-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 10px;
+  border-radius: var(--radius-md);
+  transition: background 0.2s;
+}
+
+.giver-application-row:hover {
+  background: var(--bg-card-hover);
+}
+
+.giver-app-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--gradient-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.giver-app-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.giver-app-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.giver-app-role {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.giver-app-match {
+  flex-shrink: 0;
+}
+
+.giver-app-status {
+  flex-shrink: 0;
+}
+
+.giver-app-date {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  min-width: 70px;
+  text-align: right;
+}
+
+.giver-dashboard-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.giver-quick-actions {
+  padding: 16px;
+}
+
+.giver-actions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.giver-action-btn {
+  width: 100%;
+}
+
+.giver-top-jobs {
+  padding: 16px;
+}
+
+.giver-top-jobs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.giver-top-job-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.giver-top-job-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.giver-top-job-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.giver-top-job-stats {
+  display: flex;
+  gap: 12px;
+}
+
+.giver-top-job-stat {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.giver-top-job-bar {
+  height: 4px;
+  background: var(--bg-primary);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.giver-top-job-bar-fill {
+  height: 100%;
+  background: var(--gradient-purple);
+  border-radius: 2px;
+  transition: width 0.6s ease-out;
+}
+
+.giver-verification-card {
+  padding: 16px;
+}
+
+.giver-verification-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.giver-verification-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.giver-verification-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.giver-verification-value {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.giver-verification-status {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-green);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+@media (max-width: 1024px) {
+  .giver-dashboard-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .giver-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .giver-dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+  .giver-application-row {
+    flex-wrap: wrap;
+  }
+  .giver-app-date {
+    width: 100%;
+    text-align: left;
+    padding-left: 52px;
+  }
+}

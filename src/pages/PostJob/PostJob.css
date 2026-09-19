@@ -1,0 +1,33 @@
+.placeholder-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.placeholder-card {
+  padding: 60px 24px;
+}
+
+.placeholder-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.placeholder-icon {
+  font-size: 3rem;
+}
+
+.placeholder-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.placeholder-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  max-width: 400px;
+}

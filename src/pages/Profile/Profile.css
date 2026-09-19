@@ -1,0 +1,342 @@
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 28px;
+}
+
+.profile-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-xl);
+  background: var(--gradient-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+  flex-shrink: 0;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.profile-title {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.profile-stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-stat-value {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.profile-stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.profile-skills-section,
+.profile-achievements-section {
+  padding: 20px;
+}
+
+.profile-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.profile-skill-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.profile-skill-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-skill-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.profile-skill-level {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.profile-achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-achievement {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  background: var(--bg-card-hover);
+  transition: background 0.2s;
+}
+
+.profile-achievement:hover {
+  background: var(--bg-card);
+}
+
+.achievement-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.achievement-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.achievement-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.achievement-desc {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* Giver Profile Styles */
+.profile-avatar--giver {
+  background: var(--gradient-cyan, linear-gradient(135deg, #06b6d4, #0891b2));
+}
+
+/* Government Profile Styles */
+.profile-avatar--government {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.profile-company-section,
+.profile-jobs-section {
+  padding: 20px;
+}
+
+.giver-company-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.giver-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  background: var(--bg-card-hover);
+}
+
+.giver-detail-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.giver-detail-value {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.giver-detail-verified {
+  color: var(--accent-green);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.giver-jobs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.giver-job-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  background: var(--bg-card-hover);
+  transition: background 0.2s;
+}
+
+.giver-job-item:hover {
+  background: var(--bg-card);
+}
+
+.giver-job-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.giver-job-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.giver-job-stats {
+  display: flex;
+  gap: 12px;
+}
+
+.giver-job-stat {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.giver-job-bar {
+  width: 100%;
+  height: 4px;
+  background: var(--bg-primary);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.giver-job-bar-fill {
+  height: 100%;
+  background: var(--accent-purple);
+  border-radius: 2px;
+  transition: width 0.6s ease;
+}
+
+.profile-team-section {
+  padding: 20px;
+}
+
+.giver-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.giver-team-member {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  background: var(--bg-card-hover);
+  transition: background 0.2s;
+}
+
+.giver-team-member:hover {
+  background: var(--bg-card);
+}
+
+.giver-team-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-lg);
+  background: var(--gradient-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+}
+
+.giver-team-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.giver-team-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.giver-team-role {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.giver-team-jobs {
+  font-size: 0.7rem;
+  color: var(--accent-purple);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+  .profile-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .giver-team-grid {
+    grid-template-columns: 1fr;
+  }
+}

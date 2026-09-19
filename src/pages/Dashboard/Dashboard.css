@@ -1,0 +1,249 @@
+﻿.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 20px;
+}
+
+.dashboard-python-card {
+  padding: 24px;
+}
+
+.python-card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.python-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.python-card-badge {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent-yellow);
+}
+
+.python-card-levels {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.python-card-current {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.python-card-arrow {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+}
+
+.python-card-target {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent-magenta);
+}
+
+.python-card-xp {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.python-card-modules {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.dashboard-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.section-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.overview-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px;
+  background: var(--bg-card-hover);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: all 0.2s;
+}
+
+.overview-item:hover {
+  border-color: var(--border-light);
+}
+
+.overview-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.overview-value {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.overview-value--purple {
+  color: var(--accent-purple);
+}
+
+.overview-value--green {
+  color: var(--accent-green);
+}
+
+.overview-value--magenta {
+  color: var(--accent-magenta);
+}
+
+.overview-item--xp {
+  border: 1.5px dashed rgba(224, 69, 160, 0.35);
+  background: rgba(224, 69, 160, 0.03);
+}
+
+.overview-sub {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.dashboard-bottom {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 20px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dashboard-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dashboard-action-card {
+  padding: 16px;
+}
+
+.action-card-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.action-card-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.action-card-item:hover {
+  background: var(--bg-card-hover);
+}
+
+.action-card-item-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.action-card-item-icon {
+  font-size: 1.2rem;
+}
+
+.action-card-item-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: block;
+}
+
+.action-card-item-meta {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  display: block;
+}
+
+.action-card-arrow {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.next-challenge-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.next-challenge-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+@media (max-width: 1024px) {
+  .dashboard-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dashboard-grid,
+  .dashboard-bottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+}

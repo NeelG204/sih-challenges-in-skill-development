@@ -1,0 +1,275 @@
+.challenge-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.challenge-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.challenge-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.challenge-timer {
+  font-size: 0.8rem;
+  color: var(--accent-red);
+  font-weight: 600;
+}
+
+.challenge-problem {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.problem-statement h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.problem-statement p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.problem-requirements {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.problem-requirements li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.req-icon--green {
+  color: var(--accent-green);
+}
+
+.challenge-workspace {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 20px;
+}
+
+.code-editor-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background: var(--bg-card-hover);
+  border: 1px solid var(--border-color);
+  border-bottom: none;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.editor-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.code-editor {
+  display: flex;
+  background: #0d1117;
+  border: 1px solid var(--border-color);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.editor-line-numbers {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border-right: 1px solid var(--border-color);
+  font-family: 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  user-select: none;
+  min-width: 40px;
+  text-align: right;
+}
+
+.code-textarea {
+  flex: 1;
+  padding: 14px;
+  background: transparent;
+  color: #e6edf3;
+  font-family: 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 0.78rem;
+  line-height: 1.7;
+  border: none;
+  resize: none;
+  outline: none;
+  white-space: pre;
+  tab-size: 4;
+}
+
+.editor-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  justify-content: flex-end;
+}
+
+.test-cases-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.test-cases-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.test-cases-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.test-cases-header h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.test-cases-count {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.test-cases-count--pass {
+  color: var(--accent-green);
+}
+
+.test-cases-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.test-case {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.test-case--passed {
+  background: rgba(16, 185, 129, 0.08);
+  color: var(--accent-green);
+}
+
+.test-case--failed {
+  background: rgba(239, 68, 68, 0.08);
+  color: var(--accent-red);
+}
+
+.test-case-icon--pass {
+  color: var(--accent-green);
+}
+
+.test-case-icon--fail {
+  color: var(--accent-red);
+}
+
+.challenge-tab-content {
+  padding: 24px;
+}
+
+.challenge-tab-content h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.instructions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 20px;
+}
+
+.instructions-list li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.resources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resource-link {
+  padding: 10px 14px;
+  background: rgba(224, 69, 160, 0.08);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  color: var(--accent-purple-light);
+  transition: background 0.2s;
+}
+
+.resource-link:hover {
+  background: rgba(224, 69, 160, 0.15);
+}
+
+.submission-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 24px;
+  text-align: center;
+}
+
+.submission-icon {
+  font-size: 2rem;
+  color: var(--accent-green);
+}
+
+.no-submissions {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 24px;
+}
+
+@media (max-width: 1024px) {
+  .challenge-workspace {
+    grid-template-columns: 1fr;
+  }
+}
